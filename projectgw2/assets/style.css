@@ -1,0 +1,134 @@
+header{
+    text-align: center;
+    font-size: 2em;
+    background: antiquewhite;
+    height: 100%;
+}
+head{
+    background: antiquewhite;
+    margin: 0;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+body section {
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+}
+
+.tr{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-ligne {
+    background: aquamarine;
+    padding: 10px;
+    font-size: 1.5em;
+
+}
+h1{
+    padding: 20px;
+    background: aliceblue;
+    margin-bottom: 0;
+
+}
+
+input[type="range"] {
+    position: relative;
+    margin-left: 1em;
+}
+input[type="range"]:after,
+input[type="range"]:before {
+    position: absolute;
+    top: 1em;
+    color: #aaa;
+}
+input[type="range"]:before {
+    left:0em;
+    content: attr(min);
+}
+input[type="range"]:after {
+    right: 0em;
+    content: attr(max);
+}
+header li {
+    display: flex;
+    list-style-type: none;
+    padding: 20px;
+
+}
+header ul{
+
+    margin: 0px;
+
+    display: flex;
+    list-style-type: none;
+    padding: 20px;
+    justify-content: center ;
+}
+header a {
+    text-decoration: none;
+
+}
+.bodyclass{
+    margin: 0 50px 50px 50px;
+}
+input[type="radio"]{
+    -webkit-appearance: none;
+    position: relative;
+    top: 4px;
+    outline:0;
+}
+input[type="radio"]
+{
+    background: white;
+    height: 20px;
+    width: 20px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 12px;
+    border: solid 2px;
+}
+input[type="radio"]:checked
+{
+    background: black;
+    height: 20px;
+    width: 20px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type="radio"]:checked::before{
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    content: '✔';
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+    line-height: 18px;
+    color: white;
+}
+input[type="number"] {
+    height: 18px;
+    width: 100px;
+    font-size: 18px;
+    background-color: #f7f7f7;
+    border: #777 1px solid;
+    overflow: hidden;
+}
+input[type="submit"] {
+    height: 30px;
+    width: auto;
+    font-size: 18px;
+    background-color: #f7f7f7;
+    justify-content: center;
+}

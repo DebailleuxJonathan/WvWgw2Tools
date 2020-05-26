@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/stylechest.css"/>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body onload="wood_check();">
+<header>
+    <div>
+        <p>Test GW2</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a id="acceuil" href="index.html">Accueil</a></li>
+            <li><a id="pips" href="coffre.html">Pips</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="bodyDiv">
+    <section class="left_section">
+        <div>
+            <label id="wood_chest_id"><img src="assets/img/wood_chest.png" alt="wood_chest"/></label>
+            <fieldset id="hide_wood">
+                <div id="wood_general">
+                    <div id="wood_field"></div>
+                    <div id="wood_field1"></div>
+                    <div id="wood_field2"></div>
+                    <div id="wood_field3"></div>
+                </div>
+                </br>
+            </fieldset>
+        </div>
+
+        <div>
+            <label id="bronze_chest_id"><img src="assets/img/bronze_chest.png" alt="wood_chest"/></label>
+
+            <fieldset id="hide_bronze">
+                <div id="bronze_general">
+                    <div id="bronze_field"></div>
+                    <div id="bronze_field1"></div>
+                    <div id="bronze_field2"></div>
+                    <div id="bronze_field3"></div>
+                </div>
+                </br>
+            </fieldset>
+        </div>
+
+        <div>
+            <label id="silver_chest_id"><img src="assets/img/silver_chest.png" alt="wood_chest"/></label>
+            <fieldset id="hide_silver">
+                <div id="silver_field"></div>
+                </br>
+            </fieldset>
+
+        </div>
+
+        <div>
+            <label id="gold_chest_id"><img src="assets/img/gold_chest.png" alt="wood_chest"/></label>
+            <fieldset id="hide_gold">
+                <div id="gold_field"></div>
+                </br>
+            </fieldset>
+        </div>
+        <div>
+            <label id="platinium_chest_id"><img src="assets/img/platinium_chest.png" alt="wood_chest"/></label>
+            <fieldset id="hide_platine">
+                <div id="platinium_field"></div>
+                </br>
+            </fieldset>
+        </div>
+
+        <div>
+            <label id="mithril_chest_id"><img src="assets/img/mithril_chest.png" alt="wood_chest"/></label>
+            <fieldset id="hide_mithril">
+                <div id="mithril_field"></div>
+                </br>
+            </fieldset>
+        </div>
+
+        <div>
+            <label id="diamond_chest_id"><img src="assets/img/diamond_chest.png" alt="diamond_chest"/></label>
+            <fieldset id="hide_diamond">
+                <div id="diamond_field"></div>
+                </br>
+            </fieldset>
+        </div>
+    </section>
+    <section>
+        <div class="right">
+        <div id="divte"></div>
+        <div id="compte"></div>
+            <div><button onclick="Reset();">Reset</button></div>
+        </div>
+
+
+    </section>
+
+</div>
+
+<div id="status">
+</div>
+<footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="pips.js"></script>
+
+</footer>
+
+
+
+</body>
+
+</html>

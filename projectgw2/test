@@ -1,0 +1,274 @@
+function checkboxchest() {
+    // var woodGeneral = document.getElementById("wood_general");
+    // var woodField = document.getElementById("wood_field");
+    // var woodField1 = document.getElementById("wood_field1");
+    // var woodField2 = document.getElementById("wood_field2");
+    // var woodField3 = document.getElementById("wood_field3");
+    // var tab = [];
+    // const number_pips = 101;
+    // for (var i = 1; i < number_pips; i++) {
+    //     tab[i]++;
+    // }
+    // for (var j = 1; j < tab.length; j++) {
+    //
+    //
+    //     var divWood = document.createElement('div');
+    //     var checkbox_wood = document.createElement('input');
+    //     divWood.className = "wood_pips";
+    //     checkbox_wood.type = "checkbox";
+    //     checkbox_wood.name = "checkbox_chest";
+    //     checkbox_wood.value = j;
+    //     checkbox_wood.id = "wood" + j;
+    //     // if (j > 0 && j < 26) {
+    //     //     woodGeneral.appendChild(woodField);
+    //     //     woodField.appendChild(divWood);
+    //     // }
+    //     // if (j > 25 && j < 51) {
+    //     //     woodGeneral.appendChild(woodField1);
+    //     //     woodField1.appendChild(divWood);
+    //     // }
+    //     // if (j > 50 && j < 76) {
+    //     //     woodGeneral.appendChild(woodField2);
+    //     //     woodField2.appendChild(divWood);
+    //     // }
+    //     // if (j > 75) {
+    //     //     woodGeneral.appendChild(woodField3);
+    //     //     woodField3.appendChild(divWood);
+    //     // }
+    //
+    //     woodField.appendChild(divWood);
+    //     divWood.appendChild(checkbox_wood);
+    //     var label_wood = document.createElement('label');
+    //     // assigning attributes for
+    //     // the created label tag
+    //     label_wood.htmlFor = "wood" + j;
+    //     // appending the created teAxt to
+    //     // the created label tag
+    //     label_wood.appendChild(document.createTextNode(""));
+    //     divWood.appendChild(label_wood);
+    //     starRating('.wood_pips');
+    //     if (j == 10 || j == 20 || j == 25||j == 35 || j == 45 || j == 50 || j == 60 || j == 70 || j == 75 || j == 85 || j == 95) {
+    //         var divempty = document.createElement('div');
+    //         divempty.className = "empty";
+    //         divWood.appendChild(divempty);
+
+
+
+
+    // var bronzeGeneral = document.getElementById("bronze_general");
+    // var bronzeField = document.getElementById("bronze_field");
+    // var bronzeField1 = document.getElementById("bronze_field1");
+    // var bronzeField2 = document.getElementById("bronze_field2");
+    // var bronzeField3 = document.getElementById("bronze_field3");
+    // var tab1 = [];
+    // const number_pips1 = 121;
+    // for (var i1 = 1; i1 < number_pips1; i1++) {
+    //     tab1[i1]++;
+    // }
+    // for (var j1 = 1; j1 < tab1.length; j1++) {
+    //     var divBronze = document.createElement('div');
+    //     var checkbox_bronze = document.createElement('input');
+    //     divBronze.className = "bronze_pips";
+    //     checkbox_bronze.type = "checkbox";
+    //     checkbox_bronze.name = "checkbox_chest";
+    //     checkbox_bronze.value = j1;
+    //     checkbox_bronze.id = "bronze" + j1;
+    //     // if (j1 > 0 && j1 < 31) {
+    //     //     bronzeGeneral.appendChild(bronzeField);
+    //     //     bronzeField.appendChild(divBronze);
+    //     // }
+    //     // if (j1 > 30 && j1 < 61) {
+    //     //     bronzeGeneral.appendChild(bronzeField1);
+    //     //     bronzeField1.appendChild(divBronze);
+    //     // }
+    //     // if (j1 > 60 && j1 < 91) {
+    //     //     bronzeGeneral.appendChild(bronzeField2);
+    //     //     bronzeField2.appendChild(divBronze);
+    //     // }
+    //     // if (j1 > 90) {
+    //     //     bronzeGeneral.appendChild(bronzeField3);
+    //     //     bronzeField3.appendChild(divBronze);
+    //     // }
+    //
+    //     bronzeField.appendChild(divBronze);
+    //     divBronze.appendChild(checkbox_bronze);
+    //     var label_bronze = document.createElement('label');
+    //     // assigning attributes for
+    //     // the created label tag
+    //     label_bronze.htmlFor = "bronze" + j1;
+    //     // appending the created teAxt to
+    //     // the created label tag
+    //     label_bronze.appendChild(document.createTextNode(""));
+    //     divBronze.appendChild(label_bronze);
+    //     starRating('.bronze_pips');
+    //     if (j1 == 15 || j1 == 30 || j1 == 45||j1 == 60 ||  j1 == 60 || j1 == 70 || j1 == 75 || j1 == 85 || j1 == 95) {
+    //         var divempty1 = document.createElement('div');
+    //         divempty1.className = "empty1";
+    //         divBronze.appendChild(divempty1);
+    //     }
+
+    }
+    var silverField = document.getElementById("silver_field");
+    var tab2 = [];
+    const number_pips2 = 176;
+    for (var i2 = 1; i2 < number_pips2; i2++) {
+        tab2[i2]++;
+    }
+    for (var j2 = 1; j2 < tab2.length; j2++) {
+        var divSilver = document.createElement('div');
+        var checkbox_silver = document.createElement('input');
+        divSilver.className = "silver_pips";
+        checkbox_silver.type = "checkbox";
+        checkbox_silver.name = "checkbox_chest";
+        checkbox_silver.value = j2;
+        checkbox_silver.id = "silver" + j2;
+        silverField.appendChild(divSilver);
+        divSilver.appendChild(checkbox_silver);
+        var label_silver = document.createElement('label');
+        // assigning attributes for
+        // the created label tag
+        label_silver.htmlFor = "silver" + j2;
+        // appending the created teAxt to
+        // the created label tag
+        label_silver.appendChild(document.createTextNode(""));
+        divSilver.appendChild(label_silver);
+        starRating('.silver_pips');
+        if (j2 == 35 || j2 == 70 || j2 == 105 || j2 == 140) {
+            var divempty2 = document.createElement('div');
+            divempty2.className = "empty2";
+            divSilver.appendChild(divempty2);
+        }
+
+    }
+    var goldField = document.getElementById("gold_field");
+    var tab3 = [];
+    const number_pips3 = 201;
+    for (var i3 = 1; i3 < number_pips3; i3++) {
+        tab3[i3]++;
+    }
+    for (var j3 = 1; j3 < tab3.length; j3++) {
+        var divGold = document.createElement('div');
+        var checkbox_gold = document.createElement('input');
+        divGold.className = "gold_pips";
+        checkbox_gold.type = "checkbox";
+        checkbox_gold.name = "checkbox_chest";
+        checkbox_gold.value = j3;
+        checkbox_gold.id = "gold" + j3;
+        goldField.appendChild(divGold);
+        divGold.appendChild(checkbox_gold);
+        var label_gold = document.createElement('label');
+        // assigning attributes for
+        // the created label tag
+        label_gold.htmlFor = "gold" + j3;
+        // appending the created teAxt to
+        // the created label tag
+        label_gold.appendChild(document.createTextNode(""));
+        divGold.appendChild(label_gold);
+        starRating('.gold_pips');
+        if (j3 == 40 || j3 == 80 || j3 == 120 || j3 == 160) {
+            var divempty3 = document.createElement('div');
+            divempty3.className = "empty3";
+            divGold.appendChild(divempty3);
+        }
+
+    }
+
+    var platineField = document.getElementById("platinium_field");
+    var tab4 = [];
+    const number_pips4 = 226;
+    for (var i4 = 1; i4 < number_pips4; i4++) {
+        tab4[i4]++;
+    }
+    for (var j4 = 1; j4 < tab4.length; j4++) {
+        var divPlatine = document.createElement('div');
+        var checkbox_platine = document.createElement('input');
+        divPlatine.className = "platine_pips";
+        checkbox_platine.type = "checkbox";
+        checkbox_platine.name = "checkbox_chest";
+        checkbox_platine.value = j4;
+        checkbox_platine.id = "platine" + j4;
+        platineField.appendChild(divPlatine);
+        divPlatine.appendChild(checkbox_platine);
+        var label_platine = document.createElement('label');
+        // assigning attributes for
+        // the created label tag
+        label_platine.htmlFor = "platine" + j4;
+        // appending the created teAxt to
+        // the created label tag
+        label_platine.appendChild(document.createTextNode(""));
+        divPlatine.appendChild(label_platine);
+        starRating('.platine_pips');
+        if (j4 == 45 || j4 == 90 || j4 == 135 || j4 == 180) {
+            var divempty4 = document.createElement('div');
+            divempty4.className = "empty4";
+            divPlatine.appendChild(divempty4);
+        }
+
+
+    }
+    var mithrilField = document.getElementById("mithril_field");
+    var tab5 = [];
+    const number_pips5 = 301;
+    for (var i5 = 1; i5 < number_pips5; i5++) {
+        tab5[i5]++;
+    }
+    for (var j5 = 1; j5 < tab5.length; j5++) {
+        var divMithril = document.createElement('div');
+        var checkbox_mithril = document.createElement('input');
+        divMithril.className = "mithril_pips";
+        checkbox_mithril.type = "checkbox";
+        checkbox_mithril.name = "checkbox_chest";
+        checkbox_mithril.value = j5;
+        checkbox_mithril.id = "mithril" + j5;
+        mithrilField.appendChild(divMithril);
+        divMithril.appendChild(checkbox_mithril);
+        var label_mithril = document.createElement('label');
+        // assigning attributes for
+        // the created label tag
+        label_mithril.htmlFor = "mithril" + j5;
+        // appending the created teAxt to
+        // the created label tag
+        label_mithril.appendChild(document.createTextNode(""));
+        divMithril.appendChild(label_mithril);
+        starRating('.mithril_pips');
+        if (j5 == 50 || j5 == 100 || j5 == 150 || j5 == 200 || j5 == 250) {
+            var divempty5 = document.createElement('div');
+            divempty5.className = "empty5";
+            divMithril.appendChild(divempty5);
+        }
+
+
+    }
+
+    var diamondField = document.getElementById("diamond_field");
+    var tab7 = [];
+    const number_pips7 = 331;
+    for (var i7 = 1; i7 < number_pips7; i7++) {
+        tab7[i7]++;
+    }
+    for (var j7 = 1; j7 < tab7.length; j7++) {
+        var divDiamond = document.createElement('div');
+        var checkbox_diamond = document.createElement('input');
+        divDiamond.className = "diamond_pips";
+        checkbox_diamond.type = "checkbox";
+        checkbox_diamond.name = "checkbox_chest_7";
+        checkbox_diamond.value = j7;
+        checkbox_diamond.id = "diamond" + j7;
+        diamondField.appendChild(divDiamond);
+        divDiamond.appendChild(checkbox_diamond);
+        var label_diamond = document.createElement('label');
+        // assigning attributes for
+        // the created label tag
+        label_diamond.htmlFor = "diamond" + j7;
+        // appending the created teAxt to
+        // the created label tag
+        label_diamond.appendChild(document.createTextNode(""));
+        divDiamond.appendChild(label_diamond);
+        starRating('.diamond_pips');
+        if (j7 == 55 || j7 == 110 || j7 == 165 || j7 == 220 || j7 == 275) {
+            var divempty7 = document.createElement('div');
+            divempty7.className = "empty7";
+            divDiamond.appendChild(divempty7);
+        }
+
+    }
