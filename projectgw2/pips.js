@@ -68,7 +68,9 @@ function starRating(var_pips) {
     $(var_pips).find('input[type=checkbox]').each(function () {
         $(this).on('click', function () {
             var star = $(this);
+            console.log("star : "+star);
             var rating = $(this).attr('value');
+            console.log("Value : "+rating);
             checkPrevStar(star, rating);
             uncheckNextStar(star, rating);
             countChecked();
@@ -78,6 +80,7 @@ function starRating(var_pips) {
 
 var countChecked = function () {
     var n = $("input:checked").length;
+    let div_time = document.getElementById('') ;
     $("#divte").text(n + (n === 1 ? " is" : " are") + " checked!");
     $("#compte").text("Il vous reste encore " + Math.floor((1450 - n) * 5 / 5 / 60) + "h");
 };
