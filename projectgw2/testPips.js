@@ -115,6 +115,7 @@ function starRating(var_pips) {
             checkPrevStar(star, rating);
             uncheckNextStar(star, rating);
             countChecked();
+            pips_unchecked(rating);
         });
     });
 }
@@ -275,13 +276,61 @@ function buttonDisplayAll(div) {
     countChecked();
 }
 
-function pips_unchecked() {
-    if($('.platine_pips input[type=checkbox]:checked')){
-        console.log('bro');
+function pips_unchecked(rating) {
+    if(rating > 0 && rating < 101){
+        $('.bronze_pips input[type=checkbox]').prop('checked', false);
+        $('.silver_pips input[type=checkbox]').prop('checked', false);
+        $('.gold_pips input[type=checkbox]').prop('checked', false);
+        $('.platine_pips input[type=checkbox]').prop('checked', false);
         $('.mithril_pips input[type=checkbox]').prop('checked', false);
         $('.diamond_pips input[type=checkbox]').prop('checked', false);
-
     }
+    if(rating > 100 && rating < 221){
+        $('.wood_pips input[type=checkbox]').prop('checked', true);
+        $('.silver_pips input[type=checkbox]').prop('checked', false);
+        $('.gold_pips input[type=checkbox]').prop('checked', false);
+        $('.platine_pips input[type=checkbox]').prop('checked', false);
+        $('.mithril_pips input[type=checkbox]').prop('checked', false);
+        $('.diamond_pips input[type=checkbox]').prop('checked', false);
+    }
+    if(rating > 220 && rating < 396){
+        $('.wood_pips input[type=checkbox]').prop('checked', true);
+        $('.bronze_pips input[type=checkbox]').prop('checked', true);
+        $('.gold_pips input[type=checkbox]').prop('checked', false);
+        $('.platine_pips input[type=checkbox]').prop('checked', false);
+        $('.mithril_pips input[type=checkbox]').prop('checked', false);
+        $('.diamond_pips input[type=checkbox]').prop('checked', false);
+    }
+    if(rating > 395 && rating < 596){
+        $('.wood_pips input[type=checkbox]').prop('checked', true);
+        $('.bronze_pips input[type=checkbox]').prop('checked', true);
+        $('.silver_pips input[type=checkbox]').prop('checked', true);
+        $('.platine_pips input[type=checkbox]').prop('checked', false);
+        $('.mithril_pips input[type=checkbox]').prop('checked', false);
+        $('.diamond_pips input[type=checkbox]').prop('checked', false);
+    }  if(rating > 595 && rating < 821){
+        $('.wood_pips input[type=checkbox]').prop('checked', true);
+        $('.bronze_pips input[type=checkbox]').prop('checked', true);
+        $('.silver_pips input[type=checkbox]').prop('checked', true);
+        $('.gold_pips input[type=checkbox]').prop('checked', true);
+        $('.mithril_pips input[type=checkbox]').prop('checked', false);
+        $('.diamond_pips input[type=checkbox]').prop('checked', false);
+    }  if(rating > 820 && rating < 1121){
+        $('.wood_pips input[type=checkbox]').prop('checked', true);
+        $('.bronze_pips input[type=checkbox]').prop('checked', true);
+        $('.silver_pips input[type=checkbox]').prop('checked', true);
+        $('.gold_pips input[type=checkbox]').prop('checked', true);
+        $('.platine_pips input[type=checkbox]').prop('checked', true);
+        $('.diamond_pips input[type=checkbox]').prop('checked', false);
+    }  if(rating > 1120 && rating < 1451){
+        $('.wood_pips input[type=checkbox]').prop('checked', true);
+        $('.bronze_pips input[type=checkbox]').prop('checked', true);
+        $('.silver_pips input[type=checkbox]').prop('checked', true);
+        $('.gold_pips input[type=checkbox]').prop('checked', true);
+        $('.platine_pips input[type=checkbox]').prop('checked', true);
+        $('.mithril_pips input[type=checkbox]').prop('checked', true);
+    }
+    countChecked();
 
 
 }
