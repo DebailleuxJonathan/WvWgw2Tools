@@ -101,6 +101,7 @@ function uncheckNextStar(element, count) {
         count++;
         uncheckNextStar(element, count);
     }
+
 }
 
 
@@ -122,11 +123,9 @@ var countChecked = function () {
     var n = $("input:checked").length;
     let div_time = document.getElementById('div_time').value ;
     $("#divte").text(n + (n === 1 ? " is" : " are") + " checked!");
-    if(div_time == '' || div_time >= 15){
-        console.log(div_time);
-        $("#compte").text("Veuillez rentrez une valeur correcte")
+    if(n === 0){
+        $("#compte").text("Veuillez rentrez une valeur correcte");
     } else{
-        console.log(div_time);
         $("#compte").text("Il vous reste encore " + Math.floor((1450 - n) * 5 / div_time /60) + "h");
     }
 
@@ -207,53 +206,63 @@ function buttonDisplayAll(div) {
     $(div + 'input[type=checkbox]').prop('checked', true);
 
     if(div == '.wood_pips'){
-        $(div + 'input[type=checkbox]').prop('checked', true);
         $('.wood_pips input[type=checkbox]').prop('checked', true);
-
-    }
-    else{
         $('.bronze_pips input[type=checkbox]').prop('checked', false);
         $('.silver_pips input[type=checkbox]').prop('checked', false);
         $('.gold_pips input[type=checkbox]').prop('checked', false);
         $('.platine_pips input[type=checkbox]').prop('checked', false);
         $('.mithril_pips input[type=checkbox]').prop('checked', false);
         $('.diamond_pips input[type=checkbox]').prop('checked', false);
-    if(div == '.bronze_pips '){
+    }
+
+    if(div == '.bronze_pips'){
         $('.wood_pips input[type=checkbox]').prop('checked', true);
         $('.bronze_pips input[type=checkbox]').prop('checked', true);
+        $('.silver_pips input[type=checkbox]').prop('checked', false);
+        $('.gold_pips input[type=checkbox]').prop('checked', false);
+        $('.platine_pips input[type=checkbox]').prop('checked', false);
+        $('.mithril_pips input[type=checkbox]').prop('checked', false);
+        $('.diamond_pips input[type=checkbox]').prop('checked', false);
     }
-    }
-    if(div == '.silver_pips '){
+    if(div == '.silver_pips'){
         $('.wood_pips input[type=checkbox]').prop('checked', true);
         $('.bronze_pips input[type=checkbox]').prop('checked', true);
         $('.silver_pips input[type=checkbox]').prop('checked', true);
-
+        $('.gold_pips input[type=checkbox]').prop('checked', false);
+        $('.platine_pips input[type=checkbox]').prop('checked', false);
+        $('.mithril_pips input[type=checkbox]').prop('checked', false);
+        $('.diamond_pips input[type=checkbox]').prop('checked', false);
     }
-    if(div == '.gold_pips '){
+    if(div == '.gold_pips'){
         $('.wood_pips input[type=checkbox]').prop('checked', true);
         $('.bronze_pips input[type=checkbox]').prop('checked', true);
         $('.silver_pips input[type=checkbox]').prop('checked', true);
         $('.gold_pips input[type=checkbox]').prop('checked', true);
-
+        $('.platine_pips input[type=checkbox]').prop('checked', false);
+        $('.mithril_pips input[type=checkbox]').prop('checked', false);
+        $('.diamond_pips input[type=checkbox]').prop('checked', false);
     }
-    if(div == '.platine_pips '){
+    if(div == '.platine_pips'){
         $('.wood_pips input[type=checkbox]').prop('checked', true);
         $('.bronze_pips input[type=checkbox]').prop('checked', true);
         $('.silver_pips input[type=checkbox]').prop('checked', true);
         $('.gold_pips input[type=checkbox]').prop('checked', true);
         $('.platine_pips input[type=checkbox]').prop('checked', true);
+        $('.mithril_pips input[type=checkbox]').prop('checked', false);
+        $('.diamond_pips input[type=checkbox]').prop('checked', false);
 
     }
-    if(div == '.mithril_pips '){
+    if(div == '.mithril_pips'){
         $('.wood_pips input[type=checkbox]').prop('checked', true);
         $('.bronze_pips input[type=checkbox]').prop('checked', true);
         $('.silver_pips input[type=checkbox]').prop('checked', true);
         $('.gold_pips input[type=checkbox]').prop('checked', true);
         $('.platine_pips input[type=checkbox]').prop('checked', true);
         $('.mithril_pips input[type=checkbox]').prop('checked', true);
+        $('.diamond_pips input[type=checkbox]').prop('checked', false);
 
     }
-    if(div == '.diamond_pips '){
+    if(div == '.diamond_pips'){
         $('.wood_pips input[type=checkbox]').prop('checked', true);
         $('.bronze_pips input[type=checkbox]').prop('checked', true);
         $('.silver_pips input[type=checkbox]').prop('checked', true);
@@ -262,12 +271,21 @@ function buttonDisplayAll(div) {
         $('.mithril_pips input[type=checkbox]').prop('checked', true);
         $('.diamond_pips input[type=checkbox]').prop('checked', true);
     }
-    else{
-        console.log('off');
-    }
     console.log(div);
     countChecked();
 }
+
+function pips_unchecked() {
+    if($('.platine_pips input[type=checkbox]:checked')){
+        console.log('bro');
+        $('.mithril_pips input[type=checkbox]').prop('checked', false);
+        $('.diamond_pips input[type=checkbox]').prop('checked', false);
+
+    }
+
+
+}
+
 
 function Reset() {
     $('input[type=checkbox]').prop('checked', false);

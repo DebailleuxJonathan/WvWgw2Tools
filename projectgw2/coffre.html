@@ -9,7 +9,7 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
-<body onload="wood_check();">
+<body onload="wood_check();pips_unchecked();">
 <header>
     <div>
         <p>Test GW2</p>
@@ -25,7 +25,7 @@
     <section class="left_section">
         <div>
             <label id="wood_chest_id"><img src="assets/img/wood_chest.png" alt="wood_chest"/></label>
-            <input type="button" value="Check all pips" onclick="buttonDisplayAll('.wood_pips ');">
+            <input type="button" value="Check all pips" onclick="buttonDisplayAll('.wood_pips');">
             <fieldset id="hide_wood">
                 <div id="wood_general">
                     <div id="wood_field"></div>
@@ -36,7 +36,7 @@
 
         <div>
             <label id="bronze_chest_id"><img src="assets/img/bronze_chest.png" alt="wood_chest"/></label>
-            <input type="button" value="Press button" onclick="buttonDisplayAll('.bronze_pips ');">
+            <input type="button" value="Press button" onclick="buttonDisplayAll('.bronze_pips');">
             <fieldset id="hide_bronze">
                 <div id="bronze_general">
                     <div id="bronze_field"></div>
@@ -47,7 +47,7 @@
 
         <div>
             <label id="silver_chest_id"><img src="assets/img/silver_chest.png" alt="wood_chest"/></label>
-            <input type="button" value="Press button" onclick="buttonDisplayAll('.silver_pips ');">
+            <input type="button" value="Press button" onclick="buttonDisplayAll('.silver_pips');">
             <fieldset id="hide_silver">
                 <div id="silver_field"></div>
                 </br>
@@ -57,7 +57,7 @@
 
         <div>
             <label id="gold_chest_id"><img src="assets/img/gold_chest.png" alt="wood_chest"/></label>
-            <input type="button" value="Press button" onclick="buttonDisplayAll('.gold_pips ');">
+            <input type="button" value="Press button" onclick="buttonDisplayAll('.gold_pips');">
             <fieldset id="hide_gold">
                 <div id="gold_field"></div>
                 </br>
@@ -65,7 +65,7 @@
         </div>
         <div>
             <label id="platinium_chest_id"><img src="assets/img/platinium_chest.png" alt="wood_chest"/></label>
-            <input type="button" value="Press button" onclick="buttonDisplayAll('.platine_pips ');">
+            <input type="button" value="Press button" onclick="buttonDisplayAll('.platine_pips');">
             <fieldset id="hide_platine">
                 <div id="platinium_field"></div>
                 </br>
@@ -74,7 +74,7 @@
 
         <div>
             <label id="mithril_chest_id"><img src="assets/img/mithril_chest.png" alt="wood_chest"/></label>
-            <input type="button" value="Press button" onclick="buttonDisplayAll('.mithril_pips ');">
+            <input type="button" value="Press button" onclick="buttonDisplayAll('.mithril_pips');">
             <fieldset id="hide_mithril">
                 <div id="mithril_field"></div>
                 </br>
@@ -83,7 +83,7 @@
 
         <div>
             <label id="diamond_chest_id"><img src="assets/img/diamond_chest.png" alt="diamond_chest"/></label>
-            <input type="button" value="Press button" onclick="buttonDisplayAll('.diamond_pips ');">
+            <input type="button" value="Press button" onclick="buttonDisplayAll('.diamond_pips');">
             <fieldset id="hide_diamond">
                 <div id="diamond_field"></div>
                 </br>
@@ -93,7 +93,16 @@
     <section>
         <div class="right">
             <div>
-                <input type="number" value="" id="div_time">
+                <label>Veuillez choisir la valeur: </label>
+                <select name="selector_tag" id="div_time">
+                    <option value="">--Please choose an option--</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
                 <input type="submit" value="Submit" onclick="countChecked();">
             </div>
         <div id="divte"></div>
