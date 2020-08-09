@@ -312,6 +312,13 @@ fieldset{
 #hide_diamond{
     display: none;
 }
+#countdown_wood,#countdown_bronze,#countdown_silver,#countdown_gold,#countdown_platinium,#countdown_mithril,#countdown_diamond{
+    display: table-cell;
+    vertical-align: middle;
+}
+.flex-div{
+    display: flex;
+}
 
 
 

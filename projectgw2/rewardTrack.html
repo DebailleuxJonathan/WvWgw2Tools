@@ -2,9 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/styleReward.css"/>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body>
+<header>
+    <input type="text" id="tokenUser" value="88D8A5F4-5D96-D044-83C6-FADFE570501F8CB77742-4C65-4953-97A9-0050DB86A0D7">
+    <button onclick="fetchApiData()">Submit</button>
 
+    <div>
+        <p id="apidata"></p>
+        <p id="apidata1"></p>
+        <p id="apidata2"></p>
+    </div>
+
+    <div>
+        <p>Test GW2</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a id="acceuil" href="index.html">Accueil</a></li>
+            <li><a id="pips" href="coffre.html">Pips</a></li>
+            <li><a id="reward" href="rewardTrack.html">Reward</a></li>
+        </ul>
+    </nav>
+</header>
+<p>
+    <label for="coupon">Votre nombre de coupon: </label>
+    <input type="number" name="ht" id="coupon" value="1" max="20000">
+    <label for="coupon">Votre score par minutes: </label>
+    <input type="number" name="ht" id="tickpermin" value="1" max="20000">
+    <button onclick="timeOfReward(); progressBar();">Submit</button>
+<div id="resultat">Veuillez remplir les cases</div>
+</p>
+
+<div class="div_border">
+    <div id="bar" style="height:24px;width:0;background-color: #3a3534"></div>
+    <div id="text_resultat">0/20000</div>
+
+<!--    <div>-->
+<!--        <ul>-->
+<!--            <button id="button_1_8" onclick="buttonProgressBar('#button_1_7');">2500</button>-->
+<!--            <button id="button_2_7" onclick="buttonProgressBar('#button_2_7');">5000</button>-->
+<!--            <button id="button_3_7" onclick="buttonProgressBar('#button_3_7');">7500</button>-->
+<!--            <button id="button_4_7" onclick="buttonProgressBar('#button_4_7');">10000</button>-->
+<!--            <button id="button_5_7" onclick="buttonProgressBar('#button_5_7');">12500</button>-->
+<!--            <button id="button_6_7" onclick="buttonProgressBar('#button_6_7');">15000</button>-->
+<!--            <button id="button_7_7" onclick="buttonProgressBar('#button_7_7');">17500</button>-->
+<!--        </ul>-->
+<!--    </div>-->
+</div>
+
+
+
+
+
+
+
+<footer>
+    <script type="text/javascript" src="rewardTrack.js"></script>
+</footer>
 </body>
 </html>

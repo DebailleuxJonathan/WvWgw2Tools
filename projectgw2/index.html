@@ -5,63 +5,75 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/style.css"/>
     <title>Test Gw2</title>
 </head>
 
 <body>
 <header>
-<div>
-    <p>Test GW2</p>
-</div>
+    <div>
+        <p>Test GW2</p>
+    </div>
     <nav>
         <ul>
             <li><a id="acceuil" href="index.html">Accueil</a></li>
             <li><a id="pips" href="coffre.html">Pips</a></li>
+            <li><a id="reward" href="rewardTrack.html">Reward</a></li>
         </ul>
     </nav>
 </header>
 <div class="bodyclass">
     <div class="h1class">
-<h1>CALCUL TICKET</h1>
+        <h1>CALCUL TICKET</h1>
     </div>
-<div class="flex-ligne">
-<div class="list">
-    <input type="radio"
-           id="tier_armure_T2"
-           name="tier_armure"
-           value="tier_armure_T2">
-    <label for="tier_armure_T2">Armure légendaire T2</label>
-</div>
-<div class="list">
-    <input type="radio"
-           id="tier_armure_T3"
-           name="tier_armure"
-           value="bts_cg">
-    <label for="tier_armure_T3">Armure légendaire T3</label>
-</div>
+    <div class="flex-ligne">
+
         <p>
             <label for="t_ht">Votre nombre de coupon: </label>
             <input type="number" name="ht" id="t_ht" value="1">
         </p>
         <p>
-                <label for="t_tva">Points d'escarmouche par 5min:</label>
-                <input type="number" name="tva" id="t_tva" value="1">
+            <label for="t_tva">Points d'escarmouche par 5min:</label>
+            <input type="number" name="tva" id="t_tva" value="1">
         </p>
-        <p>
-            Il vous manque : <span id="manque"></span>
-        </p>
-        <p>
-            Il vous reste encore : <span id="reste"></span>
-        </p>
-        <p>
-            Pour un nombre total de: <span id="totalheure"></span>
-        </p>
-        <p>
-            Il vous faut jouer : <span id="heure"></span>
-        </p>
-        <input type="submit" onclick="coupon()" value="Calculer">
-</div>
+<section>
+        <div class="T2">
+            <div class="list">
+                <p>Armure légendaire T2</p>
+            </div>
+            <p>
+                Il vous manque : <span id="manque"></span>
+            </p>
+            <p>
+                Il vous reste encore : <span id="reste"></span>
+            </p>
+            <p>
+                Pour un nombre total de: <span id="totalheure"></span>
+            </p>
+            <p>
+                Il vous faut jouer : <span id="heure"></span>
+            </p>
+        </div>
+        <div class="T3">
+            <div>
+                <p>Armure légendaire T3</p>
+            </div>
+            <p>
+                Il vous manque : <span id="manque1"></span>
+            </p>
+            <p>
+                Il vous reste encore : <span id="reste1"></span>
+            </p>
+            <p>
+                Pour un nombre total de: <span id="totalheure1"></span>
+            </p>
+            <p>
+                Il vous faut jouer : <span id="heure1"></span>
+            </p>
+        </div>
+</section>
+        <input type="submit" onclick="coupon();coupon1()" value="Calculer">
+    </div>
 </div>
 <!--onsubmit="ttc.value = ht.value * (1 + tva.value/100); return false;"-->
 
@@ -81,48 +93,47 @@
     let semaine;
 
     function coupon() {
-        if(document.getElementById("tier_armure_T2").checked) {
-            semaine = 7880;
-            var total = document.getElementById("");
-            var nombre = document.getElementById("t_ht");
-            var point = document.getElementById("t_tva");
-            var manque = document.getElementById("manque");
-            var reste = document.getElementById("reste");
-            var totalHeure = document.getElementById("totalheure");
-            var heure = document.getElementById("heure");
-            const calcul = 1450 * 5 / point.value / 60;
+
+        semaine = 7880;
+        var total = document.getElementById("");
+        var nombre = document.getElementById("t_ht");
+        var point = document.getElementById("t_tva");
+        var manque = document.getElementById("manque");
+        var reste = document.getElementById("reste");
+        var totalHeure = document.getElementById("totalheure");
+        var heure = document.getElementById("heure");
+        const calcul = 1450 * 5 / point.value / 60;
+        manque.innerHTML = semaine - nombre.value + " coupons";
+        reste.innerHTML = parseInt(Math.ceil((semaine / 365) - (nombre.value / 365))) + " semaines";
+        totalHeure.innerHTML = parseInt(Math.ceil((calcul) * (semaine / 365 - nombre.value / 365))) + " heures";
+        heure.innerHTML = parseInt(Math.ceil(calcul)) + " heures par semaines";
+
+    }
+
+    function coupon1() {
+
+        semaine = 8600;
+        var total = document.getElementById("");
+        var nombre = document.getElementById("t_ht");
+        var point = document.getElementById("t_tva");
+        var manque = document.getElementById("manque1");
+        var reste = document.getElementById("reste1");
+        var totalHeure = document.getElementById("totalheure1");
+        var heure = document.getElementById("heure1");
+        let calcul = 1450 * 5 / point.value / 60;
+        if (nombre.value <= semaine) {
             manque.innerHTML = semaine - nombre.value + " coupons";
             reste.innerHTML = parseInt(Math.ceil((semaine / 365) - (nombre.value / 365))) + " semaines";
             totalHeure.innerHTML = parseInt(Math.ceil((calcul) * (semaine / 365 - nombre.value / 365))) + " heures";
             heure.innerHTML = parseInt(Math.ceil(calcul)) + " heures par semaines";
+        } else if (nombre.value >= semaine) {
+            manque.innerHTML = "Accompli";
+            reste.innerHTML = "Accompli";
+            totalHeure.innerHTML = "Accompli";
+            heure.innerHTML = "Accompli";
+            console.log("zaeazezaezaezaz")
         }
-        else if (document.getElementById("tier_armure_T3").checked) {
-            semaine = 8600;
-            var total = document.getElementById("");
-            var nombre = document.getElementById("t_ht");
-            var point = document.getElementById("t_tva");
-            var manque = document.getElementById("manque");
-            var reste = document.getElementById("reste");
-            var totalHeure = document.getElementById("totalheure");
-            var heure = document.getElementById("heure");
-            const calcul = 1450 * 5 / point.value / 60;
-            if(nombre.value <= semaine) {
-                manque.innerHTML = semaine - nombre.value + " coupons";
-                reste.innerHTML = parseInt(Math.ceil((semaine / 365) - (nombre.value / 365))) + " semaines";
-                totalHeure.innerHTML = parseInt(Math.ceil((calcul) * (semaine / 365 - nombre.value / 365))) + " heures";
-                heure.innerHTML = parseInt(Math.ceil(calcul)) + " heures par semaines";
-            }else if (nombre.value >= semaine){
-                manque.innerHTML = "Accompli";
-                reste.innerHTML = "Accompli";
-                totalHeure.innerHTML = "Accompli";
-                heure.innerHTML =  "Accompli";
-                console.log("zaeazezaezaezaz")
-            }
-            console.log(nombre.value);
-        }
-        else{
-            alert("You must choose a tier")
-        }
+        console.log(nombre.value);
     }
 </script>
 </body>

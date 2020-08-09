@@ -119,6 +119,18 @@ function starRating(var_pips) {
         });
     });
 }
+function timeConvert(n) {
+    var num = n;
+    var hours = (num / 60);
+    var rhours = Math.floor(hours);
+    var minutes = (hours - rhours) * 60;
+    var rminutes = Math.round(minutes);
+    if (num > 0) {
+        return rhours + " hour(s) and " + rminutes + " minute(s).";
+    } else {
+        return "Finished";
+    }
+}
 
 var countChecked = function () {
     var n = $("input:checked").length;
@@ -126,8 +138,22 @@ var countChecked = function () {
     $("#divte").text(n + (n === 1 ? " is" : " are") + " checked!");
     if(n === 0){
         $("#compte").text("Veuillez rentrez une valeur correcte");
+        $("#countdown_wood").text("Temps restant : ");
+        $("#countdown_bronze").text("Temps restant : ");
+        $("#countdown_silver").text("Temps restant : ");
+        $("#countdown_gold").text("Temps restant : ");
+        $("#countdown_platinium").text("Temps restant : ");
+        $("#countdown_mithril").text("Temps restant : ");
+        $("#countdown_diamond").text("Temps restant : ");
     } else{
-        $("#compte").text("Il vous reste encore " + Math.floor((1450 - n) * 5 / div_time /60) + "h");
+        $("#compte").text("Il vous reste encore " + timeConvert((1450 - n) * 5 / div_time ));
+        $("#countdown_wood").text("Temps restant : " + timeConvert(((100 - n) / div_time * 5)));
+        $("#countdown_bronze").text("Temps restant : " + timeConvert(((220 - n) / div_time * 5)));
+        $("#countdown_silver").text("Temps restant : " + timeConvert(((395 - n) / div_time * 5)));
+        $("#countdown_gold").text("Temps restant : " + timeConvert(((595 - n) / div_time * 5)));
+        $("#countdown_platinium").text("Temps restant : " + timeConvert(((820 - n) / div_time * 5)));
+        $("#countdown_mithril").text("Temps restant : " + timeConvert(((1120 - n) / div_time * 5)));
+        $("#countdown_diamond").text("Temps restant : " + timeConvert(((1450 - n) / div_time * 5)));
     }
 
 };
@@ -334,7 +360,6 @@ function pips_unchecked(rating) {
 
 
 }
-
 
 function Reset() {
     $('input[type=checkbox]').prop('checked', false);
