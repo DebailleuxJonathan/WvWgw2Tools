@@ -67,8 +67,8 @@ async function fetchApiData() {
         return;
     }
     console.log(data);
-    $('#apidata').text(JSON.stringify(data['name']));
-    $('#apidata1').text(JSON.stringify('Rang: '+ data['wvw_rank']));
+    $('#apidata').text(data['name']);
+    $('#apidata1').text('Rang: '+ data['wvw_rank']);
     // +' Votre rang est: '+data['wvw_rank']
     worldNameFetch(worldId);
 }
@@ -80,7 +80,7 @@ async function worldNameFetch(worldId) {
         return;
     }
     console.log(data);
-    $('#apidata2').text(JSON.stringify('Server: '+ data['id']));
+    $('#apidata2').text('Server: '+ data[0]['name']);
 
 
 }
